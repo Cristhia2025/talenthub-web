@@ -1,5 +1,6 @@
 import './CandidatesCard.css';
 import type { Candidates } from '../types/candidates';
+import { useState } from 'react';
 
 interface CandidatesCardProps {
   candidate: Candidates;
@@ -7,6 +8,12 @@ interface CandidatesCardProps {
 
 
 export const CandidatesCard = ({ candidate }: CandidatesCardProps) => {
+  const [isSaved, setIsSaved] = useState<boolean>(false);
+
+  const handleToggleSaved = () => {
+    setIsSaved((saved) => !saved);
+  };
+
   return (
     <article className="candidates-card">
       <p className="candidates-card-company">{candidate.company}</p>
@@ -17,7 +24,14 @@ export const CandidatesCard = ({ candidate }: CandidatesCardProps) => {
           Salario: {candidate.salary.toLocaleString('es-MX')}
         </span>
       </div>
+      <button
+        type="button"
+        className={isSaved ? 'save-button-active' : 'save-button'}
+        aria-pressed={isSaved}
+        onClick={handleToggleSaved}
+      >
+        {isSaved ? 'Guardado' : 'Guardar'}
+      </button>
     </article>
   );
 };
-
