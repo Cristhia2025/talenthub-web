@@ -1,6 +1,5 @@
-import CandidatesList from './components/CandidatesList';
 import Header from './components/Header';
-import { candidates } from './data/candidates';
+import CandidatesPage from './pages/CandidatesPage';
 
 const App = () => {
   return (
@@ -8,7 +7,7 @@ const App = () => {
 
       <Header />
       <main className="container">
-        <CandidatesList candidates={candidates} />
+        <CandidatesPage />
       </main>
     </div>
 
