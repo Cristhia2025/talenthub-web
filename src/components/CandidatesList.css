@@ -1,0 +1,7 @@
+/* Una cuadrícula que se adapta sola: tantas columnas de al menos 280px como quepan. */
+.candidates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}

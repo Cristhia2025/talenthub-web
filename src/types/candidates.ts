@@ -1,5 +1,5 @@
 
-export interface CandidatesCardProps {
+export interface Candidates{
     id:number;
     title:string;
     company:string;

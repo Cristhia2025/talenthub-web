@@ -1,19 +1,21 @@
-//rafc + TAB o ENTER
-
-import {CandidatesCard} from "./components/CandidatesCard";
-
+import CandidatesList from './components/CandidatesList';
+import Header from './components/Header';
+import { candidates } from './data/candidates';
 
 const App = () => {
   return (
-    <main>
-        <h1>Talenthub</h1>
-        <p> Plataforma de Candidates</p>
-        <CandidatesCard title="Desarrollador Web" company="Tech Corp" modality="Remoto" salary={1000}/>
-        <CandidatesCard title="Analista Web" company="Atiempo" modality="Presencial" salary={500}/>
-      
-    </main>
-  )
-}
+    <div>
+
+      <Header />
+      <main className="container">
+        <CandidatesList candidates={candidates} />
+      </main>
+    </div>
+
+
+    
+  );
+};
 
 export default App;
 

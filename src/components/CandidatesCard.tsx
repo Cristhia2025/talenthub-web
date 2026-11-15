@@ -1,25 +1,22 @@
 import './CandidatesCard.css';
-
-
-//Interface Props 
+import type { Candidates } from '../types/candidates';
 
 interface CandidatesCardProps {
-    title:string;
-    company:string;
-    modality:string;
-    salary:number;
+  candidate: Candidates;
 }
 
-export const CandidatesCard = ({title,company,modality,salary} : CandidatesCardProps) => {
+
+export const CandidatesCard = ({ candidate }: CandidatesCardProps) => {
   return (
-    <article>
-
-<h2>{title}</h2>
-
-<p>{company} </p>
-<p>Modality {modality}</p>
-<p> salario: {salary}</p>
-
+    <article className="candidates-card">
+      <p className="candidates-card-company">{candidate.company}</p>
+      <h3 className="candidates-card-title">{candidate.title}</h3>
+      <div className="candidates-card-footer">
+        <span className="candidates-card-modality">{candidate.modality}</span>
+        <span className="candidates-card-salary">
+          Salario: {candidate.salary.toLocaleString('es-MX')}
+        </span>
+      </div>
     </article>
   );
 };
