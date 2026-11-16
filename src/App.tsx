@@ -1,15 +1,20 @@
-//rafc + TAB o ENTER
-
+import Header from './components/Header';
+import CandidatesPage from './pages/CandidatesPage';
 
 const App = () => {
   return (
-    <main>
-        <h1>Talenthub</h1>
-        <p> Plataforma de Candidates</p>
-      
-    </main>
-  )
-}
+    <div>
+
+      <Header />
+      <main className="container">
+        <CandidatesPage />
+      </main>
+    </div>
+
+
+    
+  );
+};
 
 export default App;
 
