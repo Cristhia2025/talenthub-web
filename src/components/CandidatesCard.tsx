@@ -1,9 +1,9 @@
 import './CandidatesCard.css';
-import type { Candidates } from '../types/candidates';
+import type { Candidate } from '../types/candidates';
 import { useState } from 'react';
 
 interface CandidatesCardProps {
-  candidate: Candidates;
+  candidate: Candidate;
 }
 
 
@@ -16,12 +16,12 @@ export const CandidatesCard = ({ candidate }: CandidatesCardProps) => {
 
   return (
     <article className="candidates-card">
-      <p className="candidates-card-company">{candidate.company}</p>
-      <h3 className="candidates-card-title">{candidate.title}</h3>
+      <p className="candidates-card-company">{candidate.email}</p>
+      <h3 className="candidates-card-title">{candidate.firstName} {candidate.lastName}</h3>
       <div className="candidates-card-footer">
-        <span className="candidates-card-modality">{candidate.modality}</span>
+        <span className="candidates-card-modality">{candidate.phone ?? 'Sin teléfono'}</span>
         <span className="candidates-card-salary">
-          Salario: {candidate.salary.toLocaleString('es-MX')}
+          {candidate.companyId ? `Empresa: ${candidate.companyId}` : 'Sin empresa asociada'}
         </span>
       </div>
       <button

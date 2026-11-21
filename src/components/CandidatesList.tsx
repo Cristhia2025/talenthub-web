@@ -1,9 +1,9 @@
 import './CandidatesList.css';
-import type { Candidates } from '../types/candidates';
+import type { Candidate } from '../types/candidates';
 import { CandidatesCard } from './CandidatesCard';
 
 interface CandidatesListProps {
-  candidates: Candidates[];
+  candidates: Candidate[];
 }
 
 const CandidatesList = ({ candidates }: CandidatesListProps) => {
