@@ -1,0 +1,8 @@
+import type { Candidate } from '../types/candidates';
+import { apiClient } from './apiClient';
+
+
+export const getCandidates = async (): Promise<Candidate[]> => {
+  const response = await apiClient.get<Candidate[]>('/candidates');
+  return response.data;
+};

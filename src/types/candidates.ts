@@ -1,8 +1,9 @@
 
-export interface Candidates{
-    id:number;
-    title:string;
-    company:string;
-    modality:string;
-    salary:number;
+export interface Candidate {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string | null;
+  companyId: string | null;
 }
