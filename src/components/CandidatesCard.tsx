@@ -1,6 +1,7 @@
 import './CandidatesCard.css';
 import type { Candidate } from '../types/candidates';
 import { useState } from 'react';
+import { Link } from 'react-router';
 
 interface CandidatesCardProps {
   candidate: Candidate;
@@ -17,7 +18,9 @@ export const CandidatesCard = ({ candidate }: CandidatesCardProps) => {
   return (
     <article className="candidates-card">
       <p className="candidates-card-company">{candidate.email}</p>
-      <h3 className="candidates-card-title">{candidate.firstName} {candidate.lastName}</h3>
+      <h3 className="candidates-card-title">
+        <Link to={`/candidates/${candidate.id}`}>{candidate.firstName} {candidate.lastName}</Link>
+      </h3>
       <div className="candidates-card-footer">
         <span className="candidates-card-modality">{candidate.phone ?? 'Sin teléfono'}</span>
         <span className="candidates-card-salary">

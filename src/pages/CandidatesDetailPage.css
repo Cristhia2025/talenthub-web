@@ -1,0 +1,57 @@
+
+.candidates-detail-back {
+  display: inline-block;
+  margin: 2rem 0 1rem;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.candidates-detail-back:hover {
+  text-decoration: underline;
+}
+
+.candidates-detail {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.candidates-detail-company {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.candidates-detail-title {
+  margin-top: 0.25rem;
+  font-size: 1.75rem;
+}
+
+.candidates-detail-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 1.5rem 0 0;
+}
+
+.candidates-detail-list dt {
+  color: var(--color-muted);
+}
+
+.candidates-detail-list dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.candidates-detail-modality {
+  text-transform: capitalize;
+}
+
+.candidates-detail-status {
+  color: var(--color-muted);
+}
+
+.candidates-detail-error {
+  color: var(--color-danger);
+}
